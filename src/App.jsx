@@ -6,7 +6,7 @@ import { useState } from 'react'
 import InfoRealizados from './Componentes/InfoRealizados'
 import './css/App.css'
 import TerFormulario from './Componentes/TerFormulario'
-import Context from './Componentes/context'
+import Context from './Componentes/Context'
 
 function App() {
   

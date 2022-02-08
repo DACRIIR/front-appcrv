@@ -1,28 +1,26 @@
-import { Children, createContext } from 'react';
-import  {useContext, useState} from 'react';
-import userContext from "./useContext";
+import  {useState} from 'react';
+import UserContext from "./UserContext";
 
 
-const Context = ({Children}) => {
+const Context = ({children}) => {
 
     const [femisora, setFemisora] = useState(0);
     const [figlesia, setFiglesia] = useState(0);
     const [fliceo, setFliceo] = useState(0);
 
-    // const object = {
-    //     femisora,
-    //     setFemisora,
-    //     figlesia,
-    //     setFiglesia,
-    //     fliceo,
-    //     setFliceo
-    // }
+    const contexValue = {
+         femisora,
+         setFemisora,
+         figlesia,
+         setFiglesia,
+         fliceo,
+         setFliceo
+     }
 
   return (
-     <userContext.Provider 
-        value={{femisora, setFemisora }}>
-         {Children}
-     </userContext.Provider>
+     <UserContext.Provider value={contexValue}>
+         {children}
+     </UserContext.Provider>
   );
 };
 
